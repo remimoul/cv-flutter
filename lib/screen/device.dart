@@ -30,8 +30,10 @@ class _DeviceScreenState extends State<DeviceScreen> {
       body: _screenList[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        selectedItemColor: Colors.teal,
+        selectedItemColor: Color.fromARGB(255, 224, 48, 59),
         unselectedItemColor: Colors.grey,
+        iconSize: 25,
+        currentIndex: _currentIndex,
         onTap: onTapTapped,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.people), label: 'Profil'),
