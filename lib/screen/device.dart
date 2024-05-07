@@ -13,11 +13,11 @@ class DeviceScreen extends StatefulWidget {
 class _DeviceScreenState extends State<DeviceScreen> {
   int _currentIndex = 0;
   final List<Widget> _screenList = [
-    ProfilScreen(),
-    ExperienceScreen(),
-    FormationScreen(),
-    SkillScreen(),
-    InfoScreen(),
+    const ProfilScreen(),
+    const ExperienceScreen(),
+    const FormationScreen(),
+    const SkillScreen(),
+    const InfoScreen(),
   ];
 
   @override
