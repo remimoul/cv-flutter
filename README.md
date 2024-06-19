@@ -15,7 +15,7 @@ Mon CV est une application mobile développée avec Flutter qui présente mon pa
 ## Installation 🪶
 
 ```bash
-git clone https://github.com/remimoul/cv-flutter
+git clone https://github.com/remimoul/cv-flutter.git
 cd cv-flutter
 ```
 
