@@ -1,3 +1,4 @@
+import 'package:cv_flutter/components/appbar.dart';
 import 'package:flutter/material.dart';
 
 class SkillScreen extends StatelessWidget {
@@ -5,30 +6,7 @@ class SkillScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Compétence'),
-        backgroundColor: const Color.fromRGBO(0, 148, 50, 1.0),
-        actions: <Widget>[
-          IconButton(
-            icon: const Icon(Icons.facebook),
-            onPressed: () {
-              // Action pour le bouton Facebook
-            },
-          ),
-          IconButton(
-            icon: Image.asset('linkedin.png', width: 20, height: 20),
-            onPressed: () {
-              // Action pour le bouton LinkedIn
-            },
-          ),
-          IconButton(
-            icon: Image.asset('twitter.png', width: 20, height: 20),
-            onPressed: () {
-              // Action pour le bouton Twitter
-            },
-          ),
-        ],
-      ),
+      appBar: const CustomAppBar(title: 'Compétences'),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(30),
         child: Column(
