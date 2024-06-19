@@ -10,7 +10,8 @@ class ProfilScreen extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          color: Colors.teal, // Définit la couleur de fond en rouge
+          color: const Color.fromRGBO(
+              0, 148, 50, 1.0), // Définit la couleur de fond en rouge
           child: Column(
             children: [
               const SizedBox(height: 30),

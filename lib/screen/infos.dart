@@ -1,17 +1,85 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class InfoScreen extends StatelessWidget {
   const InfoScreen({super.key});
   @override
   Widget build(BuildContext context) {
-    return const SingleChildScrollView(
-        padding: EdgeInsets.all(30),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Infos +'),
+        backgroundColor: const Color.fromRGBO(0, 148, 50, 1.0),
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.facebook),
+            onPressed: () {
+              // Action pour le bouton Facebook
+            },
+          ),
+          IconButton(
+            icon: Image.asset('linkedin.png', width: 20, height: 20),
+            onPressed: () {
+              // Action pour le bouton LinkedIn
+            },
+          ),
+          IconButton(
+            icon: Image.asset('twitter.png', width: 20, height: 20),
+            onPressed: () {
+              // Action pour le bouton Twitter
+            },
+          ),
+        ],
+      ),
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.all(20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text('INFOS', style: TextStyle(fontSize: 30)),
+          children: <Widget>[
+            infoItem(
+              'Boxe Anglaise',
+              'boxe.jpg',
+              'Je pratique la boxe anglaise depuis 10 ans. J\'ai commencé ce sport pour me défouler et me dépenser. J\'ai rapidement accroché et je m\'entraîne régulièrement pour progresser.',
+            ),
+            const SizedBox(height: 20),
+            infoItem(
+              'Passionné de photographie',
+              'voyage.jpg',
+              'J\'aime voyager et prendre des photos. J\'ai commencé la photographie il y a 5 ans et j\'ai appris à capturer des moments uniques et à les partager avec les autres.',
+            ),
           ],
-        ));
+        ),
+      ),
+    );
+  }
+
+  Widget infoItem(String title, String imagePath, String description) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Image.asset(
+          imagePath,
+          width: double.infinity,
+          height: 200,
+          fit: BoxFit.cover,
+        ),
+        const SizedBox(height: 10),
+        Text(
+          title,
+          style: const TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        const SizedBox(height: 10),
+        Text(
+          description,
+          style: const TextStyle(fontSize: 16),
+        ),
+        const Divider(
+          height: 30,
+          thickness: 1,
+          color: Colors.grey,
+        ),
+      ],
+    );
   }
 }

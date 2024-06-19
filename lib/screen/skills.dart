@@ -7,8 +7,27 @@ class SkillScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Compétence'),
-        backgroundColor:
-            Colors.teal, // Changez la couleur de l'app bar si nécessaire
+        backgroundColor: const Color.fromRGBO(0, 148, 50, 1.0),
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.facebook),
+            onPressed: () {
+              // Action pour le bouton Facebook
+            },
+          ),
+          IconButton(
+            icon: Image.asset('linkedin.png', width: 20, height: 20),
+            onPressed: () {
+              // Action pour le bouton LinkedIn
+            },
+          ),
+          IconButton(
+            icon: Image.asset('twitter.png', width: 20, height: 20),
+            onPressed: () {
+              // Action pour le bouton Twitter
+            },
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(30),
