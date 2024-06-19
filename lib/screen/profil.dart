@@ -23,7 +23,7 @@ class ProfilScreen extends StatelessWidget {
                   height: 300,
                   decoration: const BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage('assets/1.png'),
+                      image: AssetImage('avatar.png'),
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -62,7 +62,7 @@ class ProfilScreen extends StatelessWidget {
                 const Divider(color: Colors.black),
                 rowInfoProfil('http://google.fr/', Icons.web_asset),
                 const Divider(color: Colors.black),
-                rowInfoProfil('Lorem ipsum dolor', Icons.person_2),
+                rowInfoProfil('Développeur Web', Icons.person_2),
               ],
             ),
           ),
